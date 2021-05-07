@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "Жанры";
+}
+
+
+<h2>@ViewData["Title"]</h2>
+<p>
+    <a asp-controller="Author" asp-action="Create">Добавить</a>
+</p>
+<table class="table">
+    <tr>
+        <th>id</th>
+        <th>Жанр</th>
+        <th></th>
+    </tr>
+    
+
+        <tr>
+            <td>1</td>
+            <td>Роман</td>
+            <td>
+                <a asp-controller="Author" asp-action="Edit" asp-route-id="1">Изменить</a> |
+                <a asp-controller="Author" asp-action="Delete" asp-route-id="1">Удалить</a>
+            </td>
+        </tr>
+    
+</table>

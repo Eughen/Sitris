@@ -1,0 +1,42 @@
+﻿@model IEnumerable<WebLibrary.Models.BooksStaroseletsEV>
+@{
+    ViewData["Title"] = "List of books";
+}
+
+
+<h2>@ViewData["Title"]</h2>
+<p>
+    <a asp-controller="List" asp-action="Create">Добавить</a>
+</p>
+<table class="table">
+    <tr>
+        <th>id</th>
+        <th>Название</th>
+        <th>Аннотация</th>
+        <th>Переплет</th>
+        <th>Год</th>
+        <th>Количество</th>
+        <th>Автор</th>
+        <th>Издатель</th>
+        <th>Жанр</th>
+        <th></th>
+    </tr>
+    @foreach ( var item in Model)
+    {
+<tr>
+    <td>@item.num</td>
+    <td>@item.name</td>
+    <td>@item.anotation</td>
+    <td>@item.binding</td>
+    <td>@item.year</td>
+    <td>@item.count</td>
+    <td>@item.sername</td>
+    <td>@item.publisherName</td>
+    <td>@item.ganresName</td>
+    <td>
+        <a asp-controller="List" asp-action="Edit" asp-route-id="@item.num">Изменить</a> |
+        <a asp-controller="List" asp-action="Delete" asp-route-id="@item.num">Удалить</a>
+    </td>
+</tr>
+    }
+</table>

@@ -1,0 +1,34 @@
+﻿@model IEnumerable<WebLibrary.Models.AuthorStaroseletsEV>
+@{
+    ViewData["Title"] = "Авторы";
+}
+
+
+<h2>@ViewData["Title"]</h2>
+<p>
+    <a asp-controller="Author" asp-action="Create">Добавить</a>
+</p>
+<table class="table">
+    <tr>
+        <th>id</th>
+        <th>Имя</th>
+        <th>Очество</th>
+        <th>Фамилия</th>
+        <th>Псевдоним</th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.idAuthor</td>
+            <td>@item.name</td>
+            <td>@item.secondName</td>
+            <td>@item.sername</td>
+            <td>@item.psevdonim</td>
+            <td>
+                <a asp-controller="Author" asp-action="Edit" asp-route-id="@item.idAuthor">Изменить</a> |
+                <a asp-controller="Author" asp-action="Delete" asp-route-id="@item.idAuthor">Удалить</a>
+            </td>
+        </tr>
+    }
+</table>

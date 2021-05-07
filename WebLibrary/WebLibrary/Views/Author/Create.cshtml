@@ -1,0 +1,34 @@
+﻿@model WebLibrary.Models.AuthorStaroseletsEV
+@{
+    ViewData["Title"] = "Новый автор";
+}
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="Create" asp-controller="List">
+    <div>
+        <input type="hidden" asp-for="idAuthor" />
+        <div class="form-group">
+            <label asp-for="name"></label>
+            <input type="text" asp-for="name" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="secondName"></label>
+            <input asp-for="secondName" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="sername"></label>
+            <input asp-for="sername" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="psevdonim"></label>
+            <input asp-for="psevdonim" class="form-control" />
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Создать" class="btn btn-outline-secondary" />
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-controller="Author" asp-action="ListOfAuther">Вернуться к списку</a>
+</div>

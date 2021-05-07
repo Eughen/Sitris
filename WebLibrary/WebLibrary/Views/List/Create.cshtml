@@ -1,0 +1,49 @@
+﻿@model WebLibrary.Models.BooksStaroseletsEV
+@{
+    ViewData["Title"] = "Новая книга";
+}
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="Create" asp-controller="List">
+    <div>
+        <div class="form-group">
+            <label asp-for="name"></label>
+            <input type="text" asp-for="name" class="form-control form-control-sm" />
+        </div>
+        <div class="form-group">
+            <label asp-for="publisher"></label>
+            <input asp-for="publisher" class="form-control  form-control-sm" />
+        </div>
+        <div class="form-group">
+            <label asp-for="anotation"></label>
+            <input asp-for="anotation" class="form-control  form-control-sm" />
+        </div>
+        <div class="form-group">
+            <label asp-for="binding"></label>
+            <input asp-for="binding" class="form-control  form-control-sm" />
+        </div>
+        <div class="form-group">
+            <label asp-for="year"></label>
+            <input asp-for="year" class="form-control  form-control-sm" />
+        </div>
+        <div class="form-group">
+            <label asp-for="count"></label>
+            <input asp-for="count" class="form-control  form-control-sm" />
+        </div>
+        <div class="form-group">
+            <label asp-for="author"></label>
+            <input asp-for="author" class="form-control  form-control-sm" />
+        </div>
+        <div class="form-group">
+            <label asp-for="ganres"></label>
+            <input asp-for="ganres" class="form-control  form-control-sm" />
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Сохранить" class="btn btn-outline-secondary" />
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-controller="List" asp-action="ListOfBooks">Вернуться к списку</a>
+</div>

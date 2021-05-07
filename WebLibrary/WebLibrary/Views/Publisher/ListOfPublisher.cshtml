@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewData["Title"] = "Издательства";
+}
+
+
+<h2>@ViewData["Title"]</h2>
+<p>
+    <a asp-controller="Author" asp-action="Create">Добавить</a>
+</p>
+<table class="table">
+    <tr>
+        <th>id</th>
+        <th>Название</th>
+        <th>Адрес</th>
+        <th>Телефон</th>
+        <th>Почта</th>
+        <th></th>
+    </tr>
+
+
+    <tr>
+        <td>1</td>
+        <td>Аверсев</td>
+        <td>г.Минск ул.М.Лынькова 69</td>
+        <td>+375444745172</td>
+        <td>aversev@gmail.com</td>
+        <td>
+            <a asp-controller="Author" asp-action="Edit" asp-route-id="1">Изменить</a> |
+            <a asp-controller="Author" asp-action="Delete" asp-route-id="1">Удалить</a>
+        </td>
+    </tr>
+
+</table>
