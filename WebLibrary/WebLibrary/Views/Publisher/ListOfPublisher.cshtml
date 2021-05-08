@@ -18,17 +18,18 @@
         <th></th>
     </tr>
 
-
-    <tr>
-        <td>1</td>
-        <td>Аверсев</td>
-        <td>г.Минск ул.М.Лынькова 69</td>
-        <td>+375444745172</td>
-        <td>aversev@gmail.com</td>
-        <td>
-            <a asp-controller="Author" asp-action="Edit" asp-route-id="1">Изменить</a> |
-            <a asp-controller="Author" asp-action="Delete" asp-route-id="1">Удалить</a>
-        </td>
-    </tr>
-
-</table>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.idPublisher</td>
+            <td>@item.publisherName</td>
+            <td>@item.adress</td>
+            <td>+@item.phone</td>
+            <td>@item.mail</td>
+            <td>
+                <a asp-controller="Author" asp-action="Edit" asp-route-id="idPublisher">Изменить</a> |
+                <a asp-controller="Author" asp-action="Delete" asp-route-id="idPublisher">Удалить</a>
+            </td>
+        </tr>
+    }
+    </table>

@@ -76,3 +76,9 @@ C:\Users\stari\OneDrive\Рабочий стол\ASP.NET\WebLibrary\WebLibrary\ob
 C:\Users\stari\OneDrive\Рабочий стол\ASP.NET\WebLibrary\WebLibrary\obj\x64\Debug\net5.0\Razor\Views\Author\Edit.cshtml.g.cs
 C:\Users\stari\OneDrive\Рабочий стол\ASP.NET\WebLibrary\WebLibrary\obj\x64\Debug\net5.0\Razor\Views\Ganres\ListOfGanres.cshtml.g.cs
 C:\Users\stari\OneDrive\Рабочий стол\ASP.NET\WebLibrary\WebLibrary\obj\x64\Debug\net5.0\Razor\Views\Publisher\ListOfPublisher.cshtml.g.cs
+C:\Users\stari\OneDrive\Рабочий стол\ASP.NET\WebLibrary\WebLibrary\obj\x64\Debug\net5.0\Razor\Views\Ganres\Create.cshtml.g.cs
+C:\Users\stari\OneDrive\Рабочий стол\ASP.NET\WebLibrary\WebLibrary\obj\x64\Debug\net5.0\Razor\Views\Ganres\Delete.cshtml.g.cs
+C:\Users\stari\OneDrive\Рабочий стол\ASP.NET\WebLibrary\WebLibrary\obj\x64\Debug\net5.0\Razor\Views\Ganres\Edit.cshtml.g.cs
+C:\Users\stari\OneDrive\Рабочий стол\ASP.NET\WebLibrary\WebLibrary\obj\x64\Debug\net5.0\Razor\Views\Publisher\Create.cshtml.g.cs
+C:\Users\stari\OneDrive\Рабочий стол\ASP.NET\WebLibrary\WebLibrary\obj\x64\Debug\net5.0\Razor\Views\Publisher\Delete.cshtml.g.cs
+C:\Users\stari\OneDrive\Рабочий стол\ASP.NET\WebLibrary\WebLibrary\obj\x64\Debug\net5.0\Razor\Views\Publisher\Edit.cshtml.g.cs

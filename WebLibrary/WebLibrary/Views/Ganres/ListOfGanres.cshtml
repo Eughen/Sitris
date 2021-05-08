@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<WebLibrary.Models.GanresStaroseletsEV>
 @{
     ViewData["Title"] = "Жанры";
 }
@@ -6,7 +6,7 @@
 
 <h2>@ViewData["Title"]</h2>
 <p>
-    <a asp-controller="Author" asp-action="Create">Добавить</a>
+    <a asp-controller="Ganres" asp-action="Create">Добавить</a>
 </p>
 <table class="table">
     <tr>
@@ -14,15 +14,16 @@
         <th>Жанр</th>
         <th></th>
     </tr>
-    
 
+    @foreach (var item in Model)
+    {
         <tr>
-            <td>1</td>
-            <td>Роман</td>
+            <td>@item.idGanres</td>
+            <td>@item.ganresName</td>
             <td>
-                <a asp-controller="Author" asp-action="Edit" asp-route-id="1">Изменить</a> |
-                <a asp-controller="Author" asp-action="Delete" asp-route-id="1">Удалить</a>
+                <a asp-controller="Ganres" asp-action="Edit" asp-route-id="@item.idGanres">Изменить</a> |
+                <a asp-controller="Ganres" asp-action="Delete" asp-route-id="@item.idGanres">Удалить</a>
             </td>
         </tr>
-    
-</table>
+    }
+    </table>

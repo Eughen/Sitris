@@ -27,6 +27,8 @@ namespace WebLibrary
             string connectionString = WebLibrary.Properties.Resources.ConnectionString;
             services.AddTransient<IBooksRepository, BooksRepositoryStarodeletsEV>(provider => new BooksRepositoryStarodeletsEV(connectionString));
             services.AddTransient<IAuthorRepository, AuthorRepositoryStaroseletsEV>(provider => new AuthorRepositoryStaroseletsEV(connectionString));
+            services.AddTransient<IGanresRepository, GanresRepositoryStaroseletsEV>(provider => new GanresRepositoryStaroseletsEV(connectionString));
+            services.AddTransient<IPublisherRepository, PublisherRepositoryStaroseletsEV>(provider => new PublisherRepositoryStaroseletsEV(connectionString));
             services.AddControllersWithViews();
         }
 
