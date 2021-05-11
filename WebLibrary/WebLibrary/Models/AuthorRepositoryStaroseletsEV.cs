@@ -47,7 +47,7 @@ namespace WebLibrary.Models
         {
             using (IDbConnection db = new SqlConnection(connectionString))
             {
-                return db.Query<AuthorStaroseletsEV>("SELECT * FROM Author WHERE idAuthor = @idAuthor", new { id }).FirstOrDefault();
+                return db.Query<AuthorStaroseletsEV>("SELECT * FROM [staroselets_e_v].[dbo].[Author] WHERE idAuthor = @idAuthor", new { id }).FirstOrDefault();
             }
         }
 

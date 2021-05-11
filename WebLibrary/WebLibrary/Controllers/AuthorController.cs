@@ -36,9 +36,9 @@ namespace WebLibrary.Controllers
 
         public ActionResult Edit(int id)
         {
-            AuthorStaroseletsEV book = repo.Get(id);
-            if (book != null)
-                return View(book);
+            AuthorStaroseletsEV author = repo.Get(id);
+            if (author != null)
+                return View(author);
             return NotFound();
         }
 

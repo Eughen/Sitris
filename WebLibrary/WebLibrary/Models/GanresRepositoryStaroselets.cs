@@ -29,7 +29,7 @@ namespace WebLibrary.Models
         {
             using (IDbConnection db = new SqlConnection(connectionString))
             {
-                var sqlQuery = "INSERT INTO Ganres (GanresName) VALUES(@ganres)";
+                var sqlQuery = "INSERT INTO Ganres (GanresName) VALUES(@ganresName)";
                 db.Execute(sqlQuery, book);
             }
         }
@@ -38,7 +38,7 @@ namespace WebLibrary.Models
         {
             using (IDbConnection db = new SqlConnection(connectionString))
             {
-                var sqlQuery = "DELETE FROM Ganres WHERE idGanres = @idGanres";
+                var sqlQuery = "DELETE FROM Ganres WHERE idGanres = @IdGanres";
                 db.Execute(sqlQuery, new { id });
             }
         }
@@ -47,7 +47,7 @@ namespace WebLibrary.Models
         {
             using (IDbConnection db = new SqlConnection(connectionString))
             {
-                return db.Query<GanresStaroseletsEV>("SELECT * FROM Ganres WHERE idGanres = @idGanres", new { id }).FirstOrDefault();
+                return db.Query<GanresStaroseletsEV>("SELECT * FROM Ganres WHERE idGanres = @IdGanres", new { id }).FirstOrDefault();
             }
         }
 

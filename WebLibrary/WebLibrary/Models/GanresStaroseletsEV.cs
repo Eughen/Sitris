@@ -7,7 +7,7 @@ namespace WebLibrary.Models
 {
     public class GanresStaroseletsEV
     {
-        public int idGanres { set; get; }
+        public int IdGanres { set; get; }
         public string ganresName { set; get; }
     }
 }

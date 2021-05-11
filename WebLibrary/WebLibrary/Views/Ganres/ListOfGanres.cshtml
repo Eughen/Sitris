@@ -18,11 +18,11 @@
     @foreach (var item in Model)
     {
         <tr>
-            <td>@item.idGanres</td>
+            <td>@item.IdGanres</td>
             <td>@item.ganresName</td>
             <td>
-                <a asp-controller="Ganres" asp-action="Edit" asp-route-id="@item.idGanres">Изменить</a> |
-                <a asp-controller="Ganres" asp-action="Delete" asp-route-id="@item.idGanres">Удалить</a>
+                <a asp-controller="Ganres" asp-action="Edit" asp-route-id="@item.IdGanres">Изменить</a> |
+                <a asp-controller="Ganres" asp-action="Delete" asp-route-id="@item.IdGanres">Удалить</a>
             </td>
         </tr>
     }

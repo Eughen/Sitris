@@ -29,7 +29,8 @@ namespace WebLibrary.Models
         {
             using (IDbConnection db = new SqlConnection(connectionString))
             {
-                var sqlQuery = "INSERT INTO Books (Name, Publisher, Anotation, Binding, Year) VALUES(@name, @publisher, @anotation, @binding, @year)";
+                var sqlQuery = "INSERT INTO Books (Name, Publisher, Anotation, Binding, Year, Author, Ganres, Count) " +
+                    "VALUES(@name, @publisher, @anotation, @binding, @year, @author, @ganres, @count)";
                 db.Execute(sqlQuery, book);
             }
         }
@@ -38,7 +39,7 @@ namespace WebLibrary.Models
         {
             using (IDbConnection db = new SqlConnection(connectionString))
             {
-                var sqlQuery = "DELETE FROM Books WHERE idBooks = @id";
+                var sqlQuery ="DELETE FROM Books WHERE idBooks = @id";
                 db.Execute(sqlQuery, new { id });
             }
         }
@@ -55,7 +56,14 @@ namespace WebLibrary.Models
         {
             using (IDbConnection db = new SqlConnection(connectionString))
             {
-                return db.Query<BooksStaroseletsEV>("SELECT [staroselets_e_v].[dbo].[Books].[Name],[Publisher],[Anotation],[Binding],[Year],[Count],[num],[Author],[GanresName],[staroselets_e_v].[dbo].[Publishers].PublisherName, [staroselets_e_v].[dbo].[Author].Sername FROM [staroselets_e_v].[dbo].[Books] INNER JOIN [staroselets_e_v].[dbo].[Author] ON [staroselets_e_v].[dbo].[Books].Author = [staroselets_e_v].[dbo].[Author].idAuthor INNER JOIN [staroselets_e_v].[dbo].[Publishers] ON [staroselets_e_v].[dbo].[Books].Publisher=[staroselets_e_v].[dbo].[Publishers].idPublisher INNER JOIN [staroselets_e_v].[dbo].[Ganres] ON [staroselets_e_v].[dbo].[Books].Ganres=[staroselets_e_v].[dbo].[Ganres].idGanres").ToList();
+                return db.Query<BooksStaroseletsEV>("SELECT [staroselets_e_v].[dbo].[Books].[Name],[Publisher],[Anotation],[Binding],[Year],[Count],[num],[Author],[GanresName],[staroselets_e_v].[dbo].[Publishers].PublisherName, [staroselets_e_v].[dbo].[Author].Sername " +
+                    "FROM [staroselets_e_v].[dbo].[Books] " +
+                    "INNER JOIN [staroselets_e_v].[dbo].[Author] ON " +
+                    "[staroselets_e_v].[dbo].[Books].Author = [staroselets_e_v].[dbo].[Author].idAuthor " +
+                    "INNER JOIN [staroselets_e_v].[dbo].[Publishers] ON " +
+                    "[staroselets_e_v].[dbo].[Books].Publisher=[staroselets_e_v].[dbo].[Publishers].idPublisher " +
+                    "INNER JOIN [staroselets_e_v].[dbo].[Ganres] ON " +
+                    "[staroselets_e_v].[dbo].[Books].Ganres=[staroselets_e_v].[dbo].[Ganres].idGanres").ToList();
             }
         }
 
@@ -63,7 +71,8 @@ namespace WebLibrary.Models
         {
             using (IDbConnection db = new SqlConnection(connectionString))
             {
-                var sqlQuery = "UPDATE Books SET Name = @name, Publisher = @publisher, Anotation = @anotation, Binding = @binding, Year = @year Count = @count WHERE idBooks = @id";
+                var sqlQuery = "UPDATE Books SET Name = @name, Publisher = @publisher, Anotation = @anotation, Binding = @binding, Year = @year, Count = @count, Author = @author, Ganres = @ganres " +
+                    "WHERE idBooks = @id";
                 db.Execute(sqlQuery, book);
             }
         }
